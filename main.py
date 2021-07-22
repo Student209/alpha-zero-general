@@ -9,6 +9,10 @@ from connect4.tensorflow.NNet import NNetWrapper as nn
 from utils import dotdict
 
 
+
+
+
+
 log = logging.getLogger(__name__)
 
 coloredlogs.install(level='INFO')  # Change this to DEBUG to see more info.
@@ -33,7 +37,7 @@ args = dotdict({
 
 def main():
     log.info('Loading %s...', Game.__name__)
-    g = Game(6)
+    g = Connect4Game()
 
     log.info('Loading %s...', nn.__name__)
     nnet = nn(g)
